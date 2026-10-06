@@ -107,11 +107,11 @@ section.s{padding:120px 0}
 .sheet .l img{height:240px;width:auto}
 .sheet .r{padding:40px 36px}
 .sheet h3{font-family:'Playfair Display',serif;font-weight:400;font-size:2rem}
-.pyr{margin-top:22px;display:grid;gap:14px}
-.pyr div{display:flex;gap:16px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:12px;opacity:0;transform:translateX(24px);transition:opacity .8s var(--ease),transform .9s var(--ease)}
+.pyr{margin-top:22px;display:grid;gap:10px}
+.pyr div{display:flex;gap:16px;align-items:baseline;border-bottom:1px solid var(--line);padding-bottom:10px;opacity:0;transform:translateX(24px);transition:opacity .8s var(--ease),transform .9s var(--ease)}
 .modal.open .pyr div{opacity:1;transform:none}
 .modal.open .pyr div:nth-child(2){transition-delay:.15s}.modal.open .pyr div:nth-child(3){transition-delay:.3s}.modal.open .pyr div:nth-child(n+4){transition-delay:.4s}
-.pyr small{min-width:78px;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-size:.68rem;font-weight:600}
+.pyr small{min-width:100px;flex:none;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;font-size:.68rem;font-weight:600}
 .x{position:absolute;top:14px;right:18px;background:none;border:0;color:var(--muted);font-size:1.8rem;cursor:pointer;transition:transform .4s,color .3s;z-index:2}
 .x:hover{color:var(--gold);transform:rotate(90deg)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
@@ -207,6 +207,7 @@ footer .logo{display:block;font-size:1.4rem;margin-bottom:10px;color:var(--gold)
 <script>
 var IMG1='botol1.webp';
 var IMG2='botol2.webp';
+var IMG3='botol3.webp';
 var uid=0;
 function bottle(c1,c2){var id='g'+(++uid);
 return '<svg viewBox="0 0 120 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><linearGradient id="'+id+'l" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+c1+'"/><stop offset="1" stop-color="'+c2+'"/></linearGradient><linearGradient id="'+id+'c" x1="0" x2="1"><stop offset="0" stop-color="#8a6d1c"/><stop offset=".5" stop-color="#f3dd8e"/><stop offset="1" stop-color="#8a6d1c"/></linearGradient></defs>'+
@@ -221,14 +222,24 @@ function visual(p){return p.img?'<img src="'+p.img+'" alt="Botol parfum VELORA '
 var products=[
 {n:'Velvet Rose',t:'Floral & Warm Amber',d:'Kombinasi mawar Bulgaria manis dan kayu cendana yang elegan.',c:['#e0587e','#7a1b3d'],g:'rgba(224,88,126,.28)',
  notes:[['Top','Raspberry, Pink Pepper'],['Heart','Mawar Bulgaria, Peony'],['Base','Kayu Cendana, Amber']]},
-{n:'Pink Chiffon',t:'Sweet Fruity Floral',img:IMG2,price:'Rp79.999 / botol 50 ml',d:'Vanilla manis, berry, pear, peach, mandarin orange, dan sentuhan floral lembut. Manis, segar, creamy, dan elegan untuk pria maupun wanita.',g:'rgba(233,163,184,.26)',
- notes:[['Harga','Rp79.999'],['Ukuran','50 ml / botol'],['Gender','Unisex (Pria & Wanita)'],['Kesan','Manis, Lembut, Segar, Romantis, dan Elegan'],['Pakai','Sehari-hari, kuliah, bekerja, dan acara santai']]},
-{n:'Midnight Bloom',t:'Woody & Fresh Spice',d:'Karakter misterius dari melati malam dan jejak aroma cedarwood.',c:['#6f7cff','#1c1f5c'],g:'rgba(111,124,255,.26)',
- notes:[['Top','Kapulaga, Jeruk Nipis'],['Heart','Melati Malam, Safron'],['Base','Cedarwood, Vetiver']]}];
+{n:'Pink Chiffon',t:'Sweet Fruity Floral',img:IMG2,price:'Rp89.999 / botol 50 ml',
+ d:'Parfum dengan aroma Sweet Fruity Floral yang memadukan vanilla manis, berry, pear, peach, mandarin orange, dan sentuhan floral lembut. Memiliki karakter manis, segar, creamy, dan elegan, cocok digunakan pria maupun wanita.',
+ g:'rgba(233,163,184,.26)',
+ notes:[['Harga','Rp89.999'],['Ukuran','50 ml / botol'],['Kategori','Sweet Fruity Floral'],['Gender','Unisex (Pria & Wanita)'],['Jenis','Non-Alkohol'],
+  ['Top','Berry, Pear, Mandarin Orange'],['Middle','Peach, Floral Notes, Soft Floral Accord'],['Base','Vanilla, Creamy Sweet Accord, Soft Musk'],
+  ['Karakter','Sweet, Fruity, Floral, Creamy, dan Vanilla'],['Kesan','Manis, Lembut, Segar, Romantis, dan Elegan'],
+  ['Pemakaian','Sehari-hari, kuliah, bekerja, hangout, dan acara santai']]},
+{n:'One Direction – Our Moment',t:'Fruity Floral',img:IMG3,price:'Rp29.999 / botol 15 ml',
+ d:'Parfum dengan aroma fruity floral yang memadukan kesegaran pink grapefruit, wild berries, dan red currant dengan kelembutan freesia, jasmine, dan frangipani. Pada base notes, aroma creamy musk, sheer woods, dan white patchouli memberikan sentuhan lembut, musky, dan sedikit woody.',
+ g:'rgba(212,175,55,.22)',
+ notes:[['Harga','Rp29.999'],['Ukuran','15 ml / botol'],['Kategori','Fruity Floral'],['Gender','Unisex (lebih cenderung feminin)'],['Jenis','Non-Alkohol'],
+  ['Top','Pink Grapefruit, Wild Berries, Red Currant'],['Middle','Freesia, Jasmine, Frangipani'],['Base','Creamy Musk, Sheer Woods, White Patchouli'],
+  ['Karakter','Fruity, Floral, Fresh, sedikit Woody dan Musky'],['Kesan','Segar, Manis, Lembut, Elegan, dan Clean'],
+  ['Pemakaian','Sehari-hari, kuliah, bekerja, hangout, dan acara santai']]}];
 
 document.getElementById('heroBottle').innerHTML='<img src="'+IMG1+'" alt="Botol parfum VELORA Eau de Parfum 50 ml">';
 
-var words=['Mawar Bulgaria','Vanilla Bourbon','Melati Malam','Kayu Cendana','Bergamot','Cedarwood','Amber','Safron'];
+var words=['Mawar Bulgaria','Vanilla','Pink Grapefruit','Peach','Jasmine','Wild Berries','Kayu Cendana','Creamy Musk'];
 document.getElementById('track').innerHTML=words.concat(words).map(function(w){return '<span>'+w+'</span>'}).join('');
 
 var fine=matchMedia('(hover:hover) and (pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches;
